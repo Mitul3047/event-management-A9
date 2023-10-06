@@ -6,14 +6,14 @@ const Register = () => {
     return ( 
         <div>
             <Navbar />
-            <div className="max-h-screen- py-4">
+            <div className="max-h-screen py-4">
                 <div className="container mx-auto ">
                     <div className=" shadow-xl flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto  overflow-hidden">
                         <UserWelcome></UserWelcome>
-                        <div className="w-full lg:w-1/2 py-16 px-12 " style={{ backgroundImage: 'linear-gradient(115deg, #9F7AEA, #FEE2FE)' }}>
+                        <div className="w-full lg:w-1/2 py-8 px-12 " style={{ backgroundImage: 'linear-gradient(115deg, #9F7AEA, #FEE2FE)' }}>
                             <h2 className="text-3xl mb-4">Register</h2>
                             <p className="mb-4">
-                                Create your account. It’s free and only takes a minute
+                                Create your account. It&rsquo;s free and only takes a minute
                             </p>
                             <form>
                                 <div className="grid grid-cols-2 gap-5">

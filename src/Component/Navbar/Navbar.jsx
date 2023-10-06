@@ -15,16 +15,7 @@ const Navbar = () => {
           Home
         </NavLink>
       </li>
-      <li style={{ display: location.pathname !== "/donation" ? "block" : "none" }}>
-        <NavLink
-          to="/donation"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " underline" : ""
-          }
-        >
-          Donation
-        </NavLink>
-      </li>
+
       <li style={{ display: location.pathname !== "/about" ? "block" : "none" }}>
         <NavLink
           to="/about"
@@ -35,6 +26,20 @@ const Navbar = () => {
           About
         </NavLink>
       </li>
+
+      
+
+      <li style={{ display: location.pathname !== "/donation" ? "block" : "none" }}>
+        <NavLink
+          to="/donation"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " underline" : ""
+          }
+        >
+          Donation
+        </NavLink>
+      </li>
+      
       <li style={{ display: location.pathname !== "/login" ? "block" : "none" }}>
         <NavLink
           to="/login"
@@ -42,7 +47,7 @@ const Navbar = () => {
             isPending ? "pending" : isActive ? " underline" : ""
           }
         >
-          Join Us
+          Join Now
         </NavLink>
       </li>
       <li style={{ display: location.pathname !== "/contact" ? "block" : "none" }}>
@@ -59,7 +64,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-transparent bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -85,10 +90,10 @@ const Navbar = () => {
             {navlinks}
           </ul>
         </div>
-        <a className=" font-medium normal-case text-2xl italic ">FestiveFusion</a>
+        <a className=" font-bold normal-case text-2xl italic ">FestiveFusion</a>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navlinks}</ul>
+        <ul className="menu menu-horizontal font-semibold px-1">{navlinks}</ul>
       </div>
     </div>
   );
