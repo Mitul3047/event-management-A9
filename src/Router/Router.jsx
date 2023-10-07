@@ -6,6 +6,8 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import EventDetails from "../Pages/EventDetails/EventDetails";
+import About from "../Pages/About/About";
+import Contact from "../Pages/Contact/Contact";
 
 
 const router = createBrowserRouter([
@@ -24,7 +26,10 @@ const router = createBrowserRouter([
                 element:<EventDetails></EventDetails>,
                 loader: () => fetch('/eventData.json')
             },
-
+            {
+                path:'/about',
+                element:<About></About>
+            },
             {
                 path:'/dashboard',
                 element: <Dashboard></Dashboard>,
@@ -37,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/contact',
+                element:<Contact></Contact>
             },
         ]
     }
