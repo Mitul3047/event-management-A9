@@ -4,6 +4,8 @@ import Error from "../Pages/Eorror/Error";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import EventDetails from "../Pages/EventDetails/EventDetails";
 
 
 const router = createBrowserRouter([
@@ -15,6 +17,16 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>
+            },
+            
+            {
+                path:'/eventdetails/:id',
+                element:<EventDetails></EventDetails>
+            },
+
+            {
+                path:'/dashboard',
+                element: <Dashboard></Dashboard>
             },
             {
                 path:'/login',

@@ -10,7 +10,7 @@ const Register = () => {
                 <div className="container mx-auto ">
                     <div className=" shadow-xl flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto  overflow-hidden">
                         <UserWelcome></UserWelcome>
-                        <div className="w-full lg:w-1/2 py-8 px-12 " style={{ backgroundImage: 'linear-gradient(115deg, #9F7AEA, #FEE2FE)' }}>
+                        <div className="w-full lg:w-1/2 py-11 px-12 " style={{ backgroundImage: 'linear-gradient(115deg, #9F7AEA, #FEE2FE)' }}>
                             <h2 className="text-3xl mb-4">Register</h2>
                             <p className="mb-4">
                                 Create your account. It&rsquo;s free and only takes a minute
@@ -54,7 +54,7 @@ const Register = () => {
                                 </div>
                                 <div className="mt-5">
                                     <button className="w-full bg-purple-500 py-3 text-center rounded text-white">Register Now</button>
-                                    <p className="text-center">Already Have an Account? <Link to="/login">
+                                    <p className="text-center mt-3">Already Have an Account? <Link to="/login">
   <span className="btn-link font-medium text-purple-500">Login</span>
 </Link>
 </p>

@@ -5,7 +5,8 @@ const Navbar = () => {
 
   const navlinks = (
     <>
-      <li style={{ display: location.pathname !== "/" ? "block" : "none" }}>
+      <li style={{ display: location.pathname !== "/" ? "block" : "none",
+                     color: location.pathname !=='/' ? 'black' : 'white'  }}>
         <NavLink
           to="/"
           className={({ isActive, isPending }) =>
@@ -16,7 +17,8 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      <li style={{ display: location.pathname !== "/about" ? "block" : "none" }}>
+      <li style={{ display: location.pathname !== "/about" ? "block" : "none",
+                     color: location.pathname !=='/' ? 'black' : 'white'  }}>
         <NavLink
           to="/about"
           className={({ isActive, isPending }) =>
@@ -29,18 +31,20 @@ const Navbar = () => {
 
       
 
-      <li style={{ display: location.pathname !== "/donation" ? "block" : "none" }}>
+      <li style={{ display: location.pathname !== "/dashboard" ? "block" : "none" ,
+                     color: location.pathname !=='/' ? 'black' : 'white' }}>
         <NavLink
-          to="/donation"
+          to="/dashboard"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? " underline" : ""
           }
         >
-          Donation
+          Dashboard
         </NavLink>
       </li>
       
-      <li style={{ display: location.pathname !== "/login" ? "block" : "none" }}>
+      <li style={{ display: location.pathname !== "/login" ? "block" : "none",
+                     color: location.pathname !=='/' ? 'black' : 'white'   }}>
         <NavLink
           to="/login"
           className={({ isActive, isPending }) =>
@@ -50,7 +54,8 @@ const Navbar = () => {
           Join Now
         </NavLink>
       </li>
-      <li style={{ display: location.pathname !== "/contact" ? "block" : "none" }}>
+      <li style={{ display: location.pathname !== "/contact" ? "block" : "none" ,
+                     color: location.pathname !=='/' ? 'black' : 'white' }}>
         <NavLink
           to="/contact"
           className={({ isActive, isPending }) =>
@@ -87,13 +92,18 @@ const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
-            {navlinks}
+            {
+            navlinks
+            }
+
           </ul>
         </div>
-        <a className=" font-bold normal-case text-2xl italic ">FestiveFusion</a>
+        <a className=" font-bold normal-case text-3xl italic ">FestiveFusion</a>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal font-semibold px-1">{navlinks}</ul>
+        <ul className="menu menu-horizontal text-white text-lg font-semibold px-1">{
+        navlinks
+        }</ul>
       </div>
     </div>
   );

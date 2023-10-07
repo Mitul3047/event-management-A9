@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "name": "Wedding Package",
+      "card_img": "wedding_card.jpg",
+      "banner_img": "wedding_banner.jpg",
+      "price": "$5,000",
+      "short_description": "A complete wedding planning package, including venue, catering, decor, and more."
+    },
+    {
+      "id": 2,
+      "name": "Birthday Party Planning",
+      "card_img": "https://i.ibb.co/gWznpY5/joseph-menjivar-a-THv2s8-PRyo-unsplash.jpg",
+      "banner_img": "birthday_banner.jpg",
+      "price": "$500",
+      "short_description": "Customized birthday party planning with themes, cake, and entertainment."
+    },
+    {
+      "id": 3,
+      "name": "Anniversary Celebration",
+      "card_img": "anniversary_card.jpg",
+      "banner_img": "anniversary_banner.jpg",
+      "price": "$1,200",
+      "short_description": "Create beautiful memories with our anniversary planning services."
+    },
+    {
+      "id": 4,
+      "name": "Engagement Party Coordination",
+      "card_img": "engagement_card.jpg",
+      "banner_img": "engagement_banner.jpg",
+      "price": "$800",
+      "short_description": "Plan a memorable engagement party with our expert assistance."
+    },
+    {
+      "id": 5,
+      "name": "Retirement Celebration",
+      "card_img": "retirement_card.jpg",
+      "banner_img": "retirement_banner.jpg",
+      "price": "$600",
+      "short_description": "Celebrate the next chapter of life with a memorable retirement party."
+    },
+    {
+      "id": 6,
+      "name": "Baby Shower Planning",
+      "card_img": "baby_shower_card.jpg",
+      "banner_img": "baby_shower_banner.jpg",
+      "price": "$400",
+      "short_description": "Organize a delightful baby shower for the expecting parents-to-be."
+    }
+  ]

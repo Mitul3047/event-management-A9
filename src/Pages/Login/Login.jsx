@@ -15,7 +15,7 @@ const Login = () => {
                         <UserWelcome></UserWelcome>
 
 
-                        <div className="w-full lg:w-1/2 py-[104px] px-12 " style={{ backgroundImage: 'linear-gradient(115deg, #9F7AEA, #FEE2FE)' }}>
+                        <div className="w-full lg:w-1/2 py-10 px-12 " style={{ backgroundImage: 'linear-gradient(115deg, #9F7AEA, #FEE2FE)' }}>
                             <h2 className="text-3xl mb-4 text-center">Login</h2>
                             <p className="mb-4 text-center">
                                 Welcome back! Login to your account for quick access.
@@ -40,9 +40,14 @@ const Login = () => {
                                 </div>
                                 <div className="mt-5">
                                     <button className="w-full bg-purple-500 py-3 text-center rounded text-white">Login Now</button>
-                                    <p className="text-center">New To The Website? <Link to={'/register'}><span className="btn-link font-medium text-purple-500">Register</span></Link></p>
+                                    <p className="text-center mt-2">New To The Website? <Link to={'/register'}><span className="btn-link font-medium text-purple-500">Register</span></Link></p>
                                 </div>
                             </form>
+                            <div className="divider">or</div>
+                            <div className="space-y-3">
+                                <h4 className="w-full bg-purple-500 py-3 text-center rounded text-white">Login In With oogle</h4>
+                                <h4 className="w-full bg-purple-500 py-3 text-center rounded text-white">Login In With acebook</h4>
+                            </div>
                         </div>
                     </div>
                 </div>
