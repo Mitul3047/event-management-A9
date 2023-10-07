@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../../Component/Navbar/Navbar";
 import Swal from 'sweetalert2';
@@ -32,11 +32,15 @@ const EventDetails = () => {
     }
 
     return (
-        <div className="py-4">
+        <div className="py-4 text-center">
             <Navbar></Navbar>
-            <div className="flex flex-col md:flex-row md:px-0 px-4 justify-center items-center ">
+            <div className="flex flex-col md:flex-row md:px-0 px-4 gap-4 justify-center items-center ">
             <img className="md:w-96  rounded-2xl" src={event.banner_img} alt="" />
-            <button onClick={handleBooking} className="btn btn-secondary">Book Now</button>
+           <div className="space-y-6"> 
+           <p className="text-4xl font-medium text-purple-600">{event.description}</p>
+           <p className="text-2xl font-semibold ">Package Price: {event.price}</p>
+            <button onClick={handleBooking} className="btn bg-purple-500 text-white">Book Now</button>
+           </div>
             </div>
         </div>
     );

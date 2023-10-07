@@ -5,7 +5,7 @@
       "card_img": "wedding_card.jpg",
       "banner_img": "wedding_banner.jpg",
       "price": "$5,000",
-      "short_description": "A complete wedding planning package, including venue, catering, decor, and more."
+      "description": "A complete wedding planning package, including venue, catering, decor, and more."
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
       "card_img": "https://i.ibb.co/Cb7kGNY/morgan-lane-18-N4okm-Wcc-M-unsplash.jpg",
       "banner_img": "https://i.ibb.co/wzZ0b8F/bruce-tang-PH9ucxgjb-Y-unsplash.jpg",
       "price": "$500",
-      "short_description": "Customized birthday party planning with themes, cake, and entertainment."
+      "description": "Customized birthday party planning with themes, cake, and entertainment."
     },
     {
       "id": 3,
@@ -21,7 +21,7 @@
       "card_img": "anniversary_card.jpg",
       "banner_img": "anniversary_banner.jpg",
       "price": "$1,200",
-      "short_description": "Create beautiful memories with our anniversary planning services."
+      "description": "Create beautiful memories with our anniversary planning services."
     },
     {
       "id": 4,
@@ -29,7 +29,7 @@
       "card_img": "engagement_card.jpg",
       "banner_img": "engagement_banner.jpg",
       "price": "$800",
-      "short_description": "Plan a memorable engagement party with our expert assistance."
+      "description": "Plan a memorable engagement party with our expert assistance."
     },
     {
       "id": 5,
@@ -37,7 +37,7 @@
       "card_img": "retirement_card.jpg",
       "banner_img": "retirement_banner.jpg",
       "price": "$600",
-      "short_description": "Celebrate the next chapter of life with a memorable retirement party."
+      "description": "Celebrate the next chapter of life with a memorable retirement party."
     },
     {
       "id": 6,
@@ -45,6 +45,6 @@
       "card_img": "baby_shower_card.jpg",
       "banner_img": "baby_shower_banner.jpg",
       "price": "$400",
-      "short_description": "Organize a delightful baby shower for the expecting parents-to-be."
+      "description": "Organize a delightful baby shower for the expecting parents-to-be."
     }
   ]
