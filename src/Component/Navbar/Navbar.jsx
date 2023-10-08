@@ -64,17 +64,17 @@ const Navbar = () => {
           <div className="dropdown dropdown-end">
             <label tabIndex={0} className="btn bg-purple-500 text-white hover:text-black font-semibold ">
               {
-                user.displayName ? <p className=" ">{user.display}</p>
-                  : <p className=" ">Welcome</p>
+                user.displayName ? <p className=" ">{user.displayName}</p>
+                  : <p className=" ">{user.email}</p>
               }
             </label>
-            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-white text-purple-500 rounded-box w-52">
+            <ul tabIndex={0} className="  dropdown-content z-[1] menu p-2 shadow font-semibold bg-purple-50 text-purple-500 rounded-box w-52">
               {
-                user.photoURL ? <img src={user.photoURL} alt="" />
+                user.photoURL ? <img className="w-8 mx-auto rounded-full" src={user.photoURL} alt="" />
                   :
                   ''
               }
-              <li onClick={handleLogOut}><a>LogOut</a></li>
+              <li className="" onClick={handleLogOut}><a>LogOut</a></li>
             </ul>
           </div>
           :
@@ -141,7 +141,7 @@ const Navbar = () => {
         <a className=" font-bold normal-case text-3xl italic ">FestiveFusion</a>
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal text-white text-lg font-semibold px-1">
+        <ul className="menu menu-horizontal text-white text-base font-semibold px-1">
           {
             navlinks
           }

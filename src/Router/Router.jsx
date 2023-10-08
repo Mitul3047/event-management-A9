@@ -8,44 +8,45 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import EventDetails from "../Pages/EventDetails/EventDetails";
 import About from "../Pages/About/About";
 import Contact from "../Pages/Contact/Contact";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
     {
-        path:'/',
-        errorElement:<Error></Error>,
-        element:<MainLayout></MainLayout>,
-        children:[
+        path: '/',
+        errorElement: <Error></Error>,
+        element: <MainLayout></MainLayout>,
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
-            
+
             {
-                path:'/eventdetails/:id',
-                element:<EventDetails></EventDetails>,
+                path: '/eventdetails/:id',
+                element: <PrivateRoute><EventDetails></EventDetails></PrivateRoute>,
                 loader: () => fetch('/eventData.json')
             },
             {
-                path:'/about',
-                element:<About></About>
+                path: '/about',
+                element: <About></About>
             },
             {
-                path:'/dashboard',
-                element: <Dashboard></Dashboard>,
+                path: '/dashboard',
+                element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
                 loader: () => fetch('/eventData.json')
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
             {
-                path:'/contact',
-                element:<Contact></Contact>
+                path: '/contact',
+                element: <Contact></Contact>
             },
         ]
     }

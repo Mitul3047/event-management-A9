@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Component/Navbar/Navbar";
 import UserWelcome from "../../Component/UserWelcone/UserWelcome";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
-    const { logIn } = useContext(AuthContext);
+    const { logIn, googleLogIn } = useContext(AuthContext);
+    const location = useLocation();
+    console.log(1321312312,location);
+    const navigate = useNavigate();
 
     const handlelogin = e => {
         e.preventDefault();
@@ -14,8 +17,23 @@ const Login = () => {
         console.log(email, password);
 
         logIn(email,password)
-        .then(r=>console.log(r.user))
-        .catch(e=>console.error(e))
+        .then(result=>{
+            console.log(result.user);
+            navigate(location?.state ? location.state : '/')
+        })
+        .catch(error=>console.error(error))
+
+
+        
+    }
+    const handleGoogleLogin=()=>{
+        googleLogIn()
+        .then(result=>{
+        console.log(result.user);
+        navigate(location?.state ? location.state : '/')
+    })
+    .catch(error=>console.error(error))
+
     }
 
     return (
@@ -62,7 +80,7 @@ const Login = () => {
                             </form>
                             <div className="divider">or</div>
                             <div className="space-y-3">
-                                <h4 className="w-full bg-purple-500 py-3 text-center rounded text-white">Login In With oogle</h4>
+                                <h4 onClick={handleGoogleLogin} className="w-full bg-purple-500 py-3 text-center rounded text-white">Login In With oogle</h4>
                                 <h4 className="w-full bg-purple-500 py-3 text-center rounded text-white">Login In With acebook</h4>
                             </div>
                         </div>
