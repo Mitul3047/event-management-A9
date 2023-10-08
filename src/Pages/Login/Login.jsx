@@ -1,9 +1,22 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Component/Navbar/Navbar";
 import UserWelcome from "../../Component/UserWelcone/UserWelcome";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
+    const { logIn } = useContext(AuthContext);
 
+    const handlelogin = e => {
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        console.log(email, password);
+
+        logIn(email,password)
+        .then(r=>console.log(r.user))
+        .catch(e=>console.error(e))
+    }
 
     return (
         <div>
@@ -20,17 +33,21 @@ const Login = () => {
                             <p className="mb-4 text-center">
                                 Welcome back! Login to your account for quick access.
                             </p>
-                            <form>
+                            <form onSubmit={handlelogin}>
 
                                 <div className="mt-5">
                                     <input
-                                        type="text"
+                                        type="email"
+                                        name="email"
+                                        required
                                         placeholder="Email"
                                         className="input rounded input-sm w-full" />
                                 </div>
                                 <div className="mt-5">
                                     <input
                                         type="password"
+                                        name="password"
+                                        required
                                         placeholder="Password"
                                         className="input rounded input-sm w-full" />
                                 </div>

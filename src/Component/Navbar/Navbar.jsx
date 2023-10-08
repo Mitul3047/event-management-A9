@@ -1,7 +1,17 @@
+import { useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
   const location = useLocation();
+
+  const { user, logOut } = useContext(AuthContext)
+
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch()
+  }
 
   const navlinks = (
     <>
@@ -49,19 +59,39 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-      <li style={{
-        display: location.pathname !== "/login" ? "block" : "none",
-        color: location.pathname !== '/' ? '#a855f7ff' : 'white'
-      }}>
-        <NavLink
-          to="/login"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? " underline" : ""
-          }
-        >
-          Join Now
-        </NavLink>
-      </li>
+      {
+        user ?
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn bg-purple-500 text-white hover:text-black font-semibold ">
+              {
+                user.displayName ? <p className=" ">{user.display}</p>
+                  : <p className=" ">Welcome</p>
+              }
+            </label>
+            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-white text-purple-500 rounded-box w-52">
+              {
+                user.photoURL ? <img src={user.photoURL} alt="" />
+                  :
+                  ''
+              }
+              <li onClick={handleLogOut}><a>LogOut</a></li>
+            </ul>
+          </div>
+          :
+          <li style={{
+            display: location.pathname !== "/login" ? "block" : "none",
+            color: location.pathname !== '/' ? '#a855f7ff' : 'white'
+          }}>
+            <NavLink
+              to="/login"
+              className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? " underline" : ""
+              }
+            >
+              Join Now
+            </NavLink>
+          </li>
+      }
       <li style={{
         display: location.pathname !== "/contact" ? "block" : "none",
         color: location.pathname !== '/' ? '#a855f7ff' : 'white'

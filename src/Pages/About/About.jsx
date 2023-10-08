@@ -6,7 +6,7 @@ const About = () => {
         <div className="space-y-10">
             <Navbar></Navbar>
             <div >
-                <h2 className=" text-center text-5xl font-medium">Welcome to <span className="text-purple-500 italic">FestiveFusion</span> <br />
+                <h2 className=" text-center text-5xl font-medium">Welcome to <span className="text-purple-500 italic">FestiveFusion</span> <br/>
                     Where Moments Become Memories!</h2>
                 <p className=" text-center w-4/6 mx-auto text-gray-500 font-light py-10 text-lg">At FestiveFusion, we are passionate about creating unforgettable experiences. We understand the significance of every social event in your life, whether it's a wedding, a birthday celebration, a corporate gathering, or any special occasion. That's why we are committed to turning your dreams into reality, one event at a time.</p>
                 <div className="flex flex-col md:flex-row gap-4 my-10 md:gap-7 justify-center items-center">
