@@ -2,8 +2,8 @@
     {
       "id": 1,
       "name": "Wedding Package",
-      "card_img": "wedding_card.jpg",
-      "banner_img": "wedding_banner.jpg",
+      "card_img": " https://i.ibb.co/qYWQvLh/samantha-gades-2-Tdhw-S6-Y3p-U-unsplash.jpg",
+      "banner_img": "https://i.ibb.co/Y2GpY7D/jeremy-wong-weddings-K8-Ki-CHh4-WU4-unsplash.jpg",
       "price": "$5,000",
       "description": "A complete wedding planning package, including venue, catering, decor, and more."
     },
@@ -18,7 +18,7 @@
     {
       "id": 3,
       "name": "Anniversary Celebration",
-      "card_img": "anniversary_card.jpg",
+      "card_img": "  https://i.ibb.co/1zMmNj4/fabio-alves-Bpe-Ta-Qozg-N4-unsplash.jpg",
       "banner_img": "anniversary_banner.jpg",
       "price": "$1,200",
       "description": "Create beautiful memories with our anniversary planning services."
@@ -26,7 +26,7 @@
     {
       "id": 4,
       "name": "Engagement Party Coordination",
-      "card_img": "engagement_card.jpg",
+      "card_img": "https://i.ibb.co/c31hWMY/studio-guyub-SIQmdp-Hte-Vg-unsplash.jpg",
       "banner_img": "engagement_banner.jpg",
       "price": "$800",
       "description": "Plan a memorable engagement party with our expert assistance."
@@ -34,17 +34,23 @@
     {
       "id": 5,
       "name": "Retirement Celebration",
-      "card_img": "retirement_card.jpg",
-      "banner_img": "retirement_banner.jpg",
+      "card_img": "https://i.ibb.co/ZG66nWb/ivan-tsaregorodtsev-k1-Kh-Tq21-18-unsplash.jpg",
+      "banner_img": "https://i.ibb.co/sFwdT33/gabriele-stravinskaite-fzclu-HBur3o-unsplash.jpg",
       "price": "$600",
       "description": "Celebrate the next chapter of life with a memorable retirement party."
     },
     {
       "id": 6,
       "name": "Baby Shower Planning",
-      "card_img": "baby_shower_card.jpg",
-      "banner_img": "baby_shower_banner.jpg",
+      "card_img": " https://i.ibb.co/9nx24SW/madhuri-mohite-bae1-O5-W5g8w-unsplash.jpg",
+      "banner_img": "https://i.ibb.co/ggdKJrh/tuva-mathilde-loland-7hhn4-Smbn-T8-unsplash.jpg",
       "price": "$400",
       "description": "Organize a delightful baby shower for the expecting parents-to-be."
     }
   ]
+
+  
+ 
+
+
+ 
