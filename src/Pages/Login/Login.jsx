@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import app from "../../Firebase/Firebase";
 import UserWelcome from "../../Component/UserWelcone/UserWelcome";
+import { Helmet } from "react-helmet-async";
 
 const auth = getAuth(app);
 
@@ -92,6 +93,11 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>
+                    FestiveFusion | Login
+                </title>
+            </Helmet>
             <Navbar />
             <p className="text-center text-red-600">{error}</p>
             <div className="max-h-screen- py-4">
@@ -125,8 +131,8 @@ const Login = () => {
                                 <div className="mt-5">
                                     <button className="w-full bg-purple-500 py-3 text-center rounded text-white">Login Now</button>
                                     <div className="flex text-sm justify-between items-center mt-5">
-                                    <p className="tmt-2">New To The Website? <Link to={'/register'}><span className="btn-link font-medium text-purple-500">Register</span></Link></p>
-                                    <p className="btn-link cursor-pointer" onClick={handleForgetPass}>Forgot password?</p>
+                                        <p className="tmt-2">New To The Website? <Link to={'/register'}><span className="btn-link font-medium text-purple-500">Register</span></Link></p>
+                                        <p className="btn-link cursor-pointer" onClick={handleForgetPass}>Forgot password?</p>
                                     </div>
                                 </div>
                             </form>

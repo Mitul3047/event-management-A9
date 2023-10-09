@@ -5,6 +5,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from 'sweetalert2';
 import UserWelcome from "../../Component/UserWelcone/UserWelcome";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const [error, setError] = useState('');
@@ -172,6 +173,11 @@ const Register = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>
+                FestiveFusion | Register
+                </title>
+            </Helmet>
             <Navbar />
             <p className=" text-center text-red-600">{error}</p>
             <div className=" py-4">
