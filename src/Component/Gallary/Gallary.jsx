@@ -6,8 +6,7 @@ const Gallary = () => {
             <h2 className="text-purple-500 text-center text-4xl mb-32 ">Memory Cornner</h2>
         <div className="max-w-6xl mx-auto">
         <div className="columns-1 gap-5 lg:gap-8 sm:columns-2 lg:columns-3 xl:columns-4 [&>img:not(:first-child)]:mt-5 lg:[&>img:not(:first-child)]:mt-8">
-          <img src="https://i.ibb.co/Qv97GVT/marc-babin-a-QWm-CH-b3-MU-unsplash.jpg" alt="" />
-          
+          <img src="https://i.ibb.co/Qv97GVT/marc-babin-a-QWm-CH-b3-MU-unsplash.jpg" alt="" /> 
           <img src="https://i.ibb.co/L9BzY64/luigi-pozzoli-34-Xicn82l-Y4-unsplash.jpg" alt="" />
           <img src="https://i.ibb.co/yWgLLXF/beatriz-perez-moya-M2-T1j-6-Fn8w-unsplash.jpg" alt="" />
           <img src="https://i.ibb.co/hm3w9h5/aboodi-vesakaran-ox-P3bl3x-QPI-unsplash.jpg" alt="" />

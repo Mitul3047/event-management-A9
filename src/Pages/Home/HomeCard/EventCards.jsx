@@ -18,7 +18,7 @@ const EventCards = () => {
                 Planning and executing social events requires a keen eye for detail and a passion for creating unforgettable moments. Our dedicated team at [Your Event Management Company Name] specializes in curating a wide range of social gatherings, from weddings and birthdays to corporate parties and community gatherings. With years of experience, we meticulously coordinate every aspect of your event, from venue selection and décor to entertainment and catering.
             </p>
 
-            <div className="grid w-full mx-auto px-2 md:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div data-aos="flip-left" className="grid w-full mx-auto px-2 md:px-0 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {
                     events.map(event => (
                         <EventCard
