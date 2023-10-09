@@ -5,30 +5,29 @@ import app from "../Firebase/Firebase";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
-const ggoogleProvider =new GoogleAuthProvider()
+const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true)
-
+    const [loading, setLoading] = useState(true);
 
     const createUser = (email, password) => {
-        setUser(true);
-        return createUserWithEmailAndPassword(auth, email, password)
+        // No need to set user to true here
+        return createUserWithEmailAndPassword(auth, email, password);
     }
 
     const logIn = (email, password) => {
-        setUser(true);
-        return signInWithEmailAndPassword(auth, email, password)
+        // No need to set user to true here
+        return signInWithEmailAndPassword(auth, email, password);
     }
 
     const logOut = () => {
-        setUser(true);
+        // No need to set user to true here
         return signOut(auth);
     }
 
-    const googleLogIn =()=>{
-        return signInWithPopup(auth,ggoogleProvider)
+    const googleLogIn = () => {
+        return signInWithPopup(auth, googleProvider);
     }
 
     useEffect(() => {
@@ -45,12 +44,6 @@ const AuthProvider = ({ children }) => {
         };
     }, []);
 
-
-
-
-
-
-
     const AuthInfo = {
         user,
         createUser,
@@ -59,6 +52,7 @@ const AuthProvider = ({ children }) => {
         googleLogIn,
         loading
     }
+    
     return (
         <AuthContext.Provider value={AuthInfo}>
             {children}
@@ -71,4 +65,3 @@ AuthProvider.propTypes = {
 };
 
 export default AuthProvider;
-
