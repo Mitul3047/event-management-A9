@@ -1,35 +1,180 @@
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import Navbar from "../../Component/Navbar/Navbar";
-import UserWelcome from "../../Component/UserWelcone/UserWelcome";
-import { useContext } from "react";
-import { AuthContext } from "../../Provider/AuthProvider";
 
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from 'sweetalert2';
+import UserWelcome from "../../Component/UserWelcone/UserWelcome";
 
 const Register = () => {
+    const [error, setError] = useState('');
+    const [isCheckboxChecked, setIsCheckboxChecked] = useState(false); // State for checkbox
+    const { createUser, logOut } = useContext(AuthContext);
+    const navigate = useNavigate();
+    // const handleRegister = e => {
+    //     e.preventDefault();
 
-    const { createUser } = useContext(AuthContext)
+    //     const email = e.target.email.value;
+    //     const password = e.target.password.value;
+    //     const confirmPassword = e.target.confirmPassword.value;
 
+    //     // Validate password
+    //     const passwordValidationResult = validatePassword(password);
+    //     if (passwordValidationResult !== true) {
+    //         Swal.fire(
+    //             'Oops!',
+    //             passwordValidationResult,
+    //             'error'
+    //         );
+    //         return;
+    //     }
+
+    //     if (password !== confirmPassword) {
+    //         Swal.fire(
+    //             'Oops!',
+    //             'Password and Confirm Password do not match.',
+    //             'error'
+    //         );
+    //     } else if (!isCheckboxChecked) {
+    //         Swal.fire(
+    //             'Oops!',
+    //             'Please accept the Terms of Use and Privacy Policy.',
+    //             'error'
+    //         );
+    //     } else {
+    //         createUser(email, password)
+    //             .then(r => {
+    //                 console.log(r.user);
+    //                 // You can handle successful registration here
+    //                 Swal.fire(
+    //                     'Success!',
+    //                     'User registration successful.',
+    //                     'success'
+    //                 );
+    //                 logOut()
+    //                     .then(() => {
+    //                         // Log out success
+    //                     })
+    //                     .catch(error => {
+    //                         console.error(error);
+    //                         // Handle logout error
+    //                     });
+    //                     navigate(location?.state ? location.state : '/')
+    //             })
+    //             .catch(error => {
+    //                 console.error(error);
+    //                 // You can handle registration errors here
+    //                 if (error.message === "Firebase: Error (auth/email-already-in-use).") {
+    //                     Swal.fire(
+    //                         'Oops!',
+    //                         'User already exists.',
+    //                         'error'
+    //                     );
+    //                 } else(setError(error.message))
+    //             });
+    //     }
+    // }
     const handleRegister = e => {
         e.preventDefault();
-        const firstname = e.target.firstname.value;
-        const surname = e.target.surname.value;
+    
         const email = e.target.email.value;
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value;
-        console.log(firstname, surname, password, email, confirmPassword);
+    
+        // Validate password
+        const passwordValidationResult = validatePassword(password);
+        if (passwordValidationResult !== true) {
+            Swal.fire(
+                'Oops!',
+                passwordValidationResult,
+                'error'
+            );
+            return;
+        }
+    
+        if (password !== confirmPassword) {
+            Swal.fire(
+                'Oops!',
+                'Password and Confirm Password do not match.',
+                'error'
+            );
+        } else if (!isCheckboxChecked) {
+            Swal.fire(
+                'Oops!',
+                'Please accept the Terms of Use and Privacy Policy.',
+                'error'
+            );
+        } else {
+            createUser(email, password)
+                .then(r => {
+                    console.log(r.user);
+                    // You can handle successful registration here
+                    Swal.fire(
+                        'Success!',
+                        'User registration successful.',
+                        'success'
+                    );
+    
+                    // Reset the form fields
+                    e.target.email.value = '';
+                    e.target.password.value = '';
+                    e.target.confirmPassword.value = '';
+                    setIsCheckboxChecked(false);
+    
+                    logOut()
+                        .then(() => {
+                            // Log out success
+                        })
+                        .catch(error => {
+                            console.error(error);
+                            // Handle logout error
+                        });
+                    navigate(location?.state ? location.state : '/login')
+                })
+                .catch(error => {
+                    console.error(error);
+                    // You can handle registration errors here
+                    if (error.message === "Firebase: Error (auth/email-already-in-use).") {
+                        Swal.fire(
+                            'Oops!',
+                            'User already exists.',
+                            'error'
+                        );
+                    } else(setError(error.message))
+                });
+        }
+    }
+    
 
-        // createuser
-
-        createUser(email,password)
-        .then(r => console.log(r.user))
-        .catch(e=> console.error(e))
-
+    const handleCheckboxChange = (e) => {
+        setIsCheckboxChecked(e.target.checked);
     }
 
+    const validatePassword = (password) => {
+        // Check if the password is less than 6 characters
+        if (password.length < 6) {
+            return 'Password must be at least 6 characters.';
+        }
+
+        // Check if the password has at least one capital letter
+        if (!/[A-Z]/.test(password)) {
+            return 'Password must contain at least one uppercase letter.';
+        }
+
+        // Check if the password has a special character or number
+        if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>?0-9]/.test(password)) {
+            return 'Password must contain at least one special character or number.';
+        }
+        
+
+        // If all individual validations pass, return true
+        return true;
+    }
     return (
         <div>
             <Navbar />
-            <div className="max-h-screen py-4">
+            <p className=" text-center text-red-600">{error}</p>
+            <div className=" py-4">
                 <div className="container mx-auto ">
                     <div className="shadow-xl flex flex-col lg:flex-row w-10/12 lg:w-8/12 bg-white rounded-xl mx-auto  overflow-hidden">
                         <UserWelcome />
@@ -76,7 +221,8 @@ const Register = () => {
                                 <div className="mt-5">
                                     <input
                                         type="checkbox"
-                                        className="border border-gray-400 mr-3" />
+                                        className="border border-gray-400 mr-3"
+                                        onChange={handleCheckboxChange} />
                                     <span>
                                         I accept the <a href="#" className="text-purple-500 font-semibold">Terms of Use</a> &  <a href="#" className="text-purple-500 font-semibold">Privacy Policy</a>
                                     </span>
@@ -88,6 +234,7 @@ const Register = () => {
                                     </Link>
                                     </p>
                                 </div>
+
                             </form>
                         </div>
                     </div>

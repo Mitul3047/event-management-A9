@@ -1,5 +1,7 @@
 import Banner from "../../Component/Banner/Banner";
+import Gallary from "../../Component/Gallary/Gallary";
 import Navbar from "../../Component/Navbar/Navbar";
+import Clints from "../../Component/clints/clints";
 import EventCards from "./HomeCard/EventCards";
 
 
@@ -14,6 +16,9 @@ const Home = () => {
             </div>
            
            <EventCards></EventCards>
+           <Clints></Clints>
+           <Gallary></Gallary>
+           
         </div>
     );
 };

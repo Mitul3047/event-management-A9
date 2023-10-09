@@ -105,6 +105,19 @@ const Navbar = () => {
           Contact
         </NavLink>
       </li>
+      <li style={{
+        display: location.pathname !== "/blog" ? "block" : "none",
+        color: location.pathname !== '/' ? '#a855f7ff' : 'white'
+      }}>
+        <NavLink
+          to="/blog"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " underline" : ""
+          }
+        >
+          Blog
+        </NavLink>
+      </li>
     </>
   );
 

@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "Alice Johnson",
+        "event_name": "Wedding Package",
+        "rating": 5,
+        "review": "We had an amazing wedding thanks to their wonderful planning. Everything was perfect!",
+        "img": "https://i.ibb.co/FwWGf4C/jimmy-fermin-bqe0-J0b26-RQ-unsplash.jpg"
+    },
+    {
+        "id": 2,
+        "name": "John Smith",
+        "event_name": "Birthday Party Planning",
+        "rating": 4,
+        "review": "Our child's birthday party was a blast! Only a small hiccup, but overall great.",
+        "img": "https://i.ibb.co/vYT2H0V/jurica-koletic-7-YVZYZe-ITc8-unsplash.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Emily Davis",
+        "event_name": "Anniversary Celebration",
+        "rating": 5,
+        "review": "Our anniversary celebration was beautiful and filled with love. Highly recommended.",
+        "img": "https://i.ibb.co/fdnpVdw/jake-nackos-IF9-TK5-Uy-KI-unsplash.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Michael Wilson",
+        "event_name": "Engagement Party Coordination",
+        "rating": 4,
+        "review": "We enjoyed our engagement party. A few minor issues, but it was a memorable day.",
+        "img": "https://i.ibb.co/TgZwJNW/joseph-gonzalez-i-Fg-Rcq-Hznqg-unsplash.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Sarah Miller",
+        "event_name": "Retirement Celebration",
+        "rating": 5,
+        "review": "My retirement party was fantastic! Thanks to the team for making it special.",
+        "img": "https://i.ibb.co/1JmrPtM/stephanie-liverani-Zz5-LQe-VSMY-unsplash.jpg"
+    },
+    {
+        "id": 6,
+        "name": "David Clark",
+        "event_name": "Baby Shower Planning",
+        "rating": 5,
+        "review": "Our baby shower was adorable! It couldn't have been better. Thank you!",
+        "img": "https://i.ibb.co/t3rsQbg/albert-dera-ILip77-Sbm-OE-unsplash.jpg"
+    }
+]
