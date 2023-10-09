@@ -189,12 +189,14 @@ const Register = () => {
                                         type="text"
                                         name="firstname"
                                         placeholder="Firstname"
+                                        required
                                         className="input rounded input-sm" />
 
                                     <input
                                         type="text"
                                         name="surname"
                                         placeholder="Surname"
+                                        required
                                         className="input rounded input-sm" />
                                 </div>
                                 <div className="mt-5">
@@ -202,6 +204,7 @@ const Register = () => {
                                         type="text"
                                         name="email"
                                         placeholder="Email"
+                                        required
                                         className="input rounded input-sm w-full" />
                                 </div>
                                 <div className="mt-5">
@@ -209,6 +212,7 @@ const Register = () => {
                                         type="password"
                                         name="password"
                                         placeholder="Password"
+                                        required
                                         className="input rounded input-sm w-full" />
                                 </div>
                                 <div className="mt-5">
@@ -216,6 +220,7 @@ const Register = () => {
                                         type="password"
                                         name="confirmPassword"
                                         placeholder="Confirm Password"
+                                        required
                                         className="input rounded input-sm w-full" />
                                 </div>
                                 <div className="mt-5">

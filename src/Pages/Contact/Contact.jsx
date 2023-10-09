@@ -1,5 +1,7 @@
 import Navbar from "../../Component/Navbar/Navbar";
-
+import { FaLocationCrosshairs } from 'react-icons/fa6';
+import { BsFillTelephoneInboundFill } from 'react-icons/bs';
+import { AiTwotoneMail } from 'react-icons/ai';
 
 const Contact = () => {
     return (
@@ -13,15 +15,24 @@ const Contact = () => {
                 <div className="space-y-8">
                     <div className="space-y-3">
                         <h3 className=" font-medium text-3xl text-purple-500">Email</h3>
+                        <div className="flex justify-start gap-4 items-center">
+                            <AiTwotoneMail className="text-purple-500"></AiTwotoneMail>
                         <p className="text-base ">FestiveFusion@FestiveFusion.com</p>
+                        </div>
                     </div>
                     <div className="space-y-3">
                         <h3 className=" font-medium text-3xl text-purple-500">Phone Number</h3>
+                        <div className="flex justify-start gap-4 items-center">
+                            <BsFillTelephoneInboundFill  className="text-purple-500"></BsFillTelephoneInboundFill>
                         <p className="text-base ">+880123456789</p>
+                        </div>
                     </div>
                     <div className="space-y-3">
                         <h3 className=" font-medium text-3xl text-purple-500">Location</h3>
+                        <div className="flex justify-start gap-4 items-center">
+                            <FaLocationCrosshairs className="text-purple-500"></FaLocationCrosshairs>
                         <p className="text-base ">Chasara,Narayanganj,Bangladesh</p>
+                        </div>
                     </div>
                 </div>
                 <div className="flex flex-col space-y-10">
