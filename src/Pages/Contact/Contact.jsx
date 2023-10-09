@@ -6,28 +6,28 @@ const Contact = () => {
         <div >
             <Navbar></Navbar>
             <div className="">
-                <img className="md:h-[450px] w-full" src="https://i.ibb.co/7Yv7N30/harli-marten-M9jr-KDXOQo-U-unsplash.jpg" alt="" />
+                <img className="md:h-[500px] w-full" src="https://i.ibb.co/R2ZTdjY/pavan-trikutam-71-Cj-SSB83-Wo-unsplash.jpg" alt="" />
             </div>
-            <h2 className="text-5xl text-center py-10">Contact Us</h2>
+            <h2 className="text-5xl text-center py-10 text-purple-500">Contact Us</h2>
             <div className="flex md:flex-row flex-col justify-around  items-center py-20">
                 <div className="space-y-8">
                     <div className="space-y-3">
-                        <h3 className=" font-medium text-3xl">Email</h3>
+                        <h3 className=" font-medium text-3xl text-purple-500">Email</h3>
                         <p className="text-base ">FestiveFusion@FestiveFusion.com</p>
                     </div>
                     <div className="space-y-3">
-                        <h3 className=" font-medium text-3xl">Phone Number</h3>
+                        <h3 className=" font-medium text-3xl text-purple-500">Phone Number</h3>
                         <p className="text-base ">+880123456789</p>
                     </div>
                     <div className="space-y-3">
-                        <h3 className=" font-medium text-3xl">Location</h3>
+                        <h3 className=" font-medium text-3xl text-purple-500">Location</h3>
                         <p className="text-base ">Chasara,Narayanganj,Bangladesh</p>
                     </div>
                 </div>
                 <div className="flex flex-col space-y-10">
-                    <input className=" py-3 border-b bg-transparent border-purple-500" placeholder="Name" type="text" name="" />
-                    <input className="py-3 border-b bg-transparent border-purple-500" type="email" placeholder="Email" />
-                    <textarea placeholder="FeedBack " className="py-3 bg-transparent border border-purple-500" name="" id="" cols="30" rows="3"></textarea>
+                    <input className=" w-full p-3 border-b bg-transparent border-purple-500" placeholder="Name" type="text" name="" />
+                    <input className="w-full p-3 border-b bg-transparent border-purple-500" type="email" placeholder="Email" />
+                    <textarea placeholder="FeedBack " className="w-full p-3 bg-transparent border border-purple-500" name="" id="" cols="30" rows="3"></textarea>
                 </div>
             </div>
             <div style={{ width: '100%' }}>

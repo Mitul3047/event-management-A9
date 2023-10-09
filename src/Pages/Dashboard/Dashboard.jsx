@@ -27,7 +27,7 @@ const Dashboard = () => {
             <Navbar />
             <div>
                 <div className="">
-                    <img className="h-[80vh] w-full" src="https://i.ibb.co/D9M46YQ/adi-goldstein-Hli3-R6-LKibo-unsplash.jpg" alt="" />
+                    <img className="h-[500px] w-full" src="https://i.ibb.co/KhGmqwp/bruno-kelzer-Lvy-SG1hvuz-I-unsplash.jpg" alt="" />
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {eventBooked.length === 0 ? (
